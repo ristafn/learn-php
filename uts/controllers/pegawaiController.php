@@ -18,6 +18,10 @@ switch($tombol) {
     case 'simpan':
         $pegawai->simpan($listData);
         break;
+    case 'ubah':
+        $listData[] = $_POST['idx'];
+        $pegawai->ubah($listData);
+        break;
     case 'hapus':
         $id[] = $_POST['idx'];
         $pegawai->hapus($id);

@@ -38,6 +38,13 @@ class Pegawai {
         return $result;
     }
 
+    // ubah (pegawauController.php)
+    public function ubah($data) {
+        $sql = "UPDATE pegawai SET nip=?,nama=?,email=?,agama=?,iddivisi=?,foto=? WHERE pegawai.id=?";
+        $gather = $this->koneksi->prepare($sql);
+        $gather->execute($data);
+    }
+
     // hapus pegawai (dataPegawai.php)
     public function hapus($id) {
         $sql = "DELETE FROM pegawai WHERE id=?";

@@ -1,6 +1,6 @@
 <!-- footer -->
-        <div class="row-12 border-top bg-light">
-            footer
+        <div class="col-12 border-top bg-light">
+            <p class="p-4 text-center">&copy; 2021 Develop by Rista Fauji Nafsir</p>
         </div>
         <!-- end footer -->
 
