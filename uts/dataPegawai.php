@@ -38,6 +38,7 @@ $tampil = $model->tampilData();
         <td><?= $tampil['foto']; ?></td>
         <td>
           <form method="POST" action="controllers/pegawaiController.php">
+            <a href="index.php?page=detailPegawai&id=<?= $tampil['id'];?>" class="btn btn-success"><i class="fa fa-info" aria-hidden="true"></i></a>
             <button class="btn btn-danger" name="proses" value="hapus"><i class="fa fa-trash" aria-hidden="true"></i></button>
             <input type="hidden" name="idx" id="idx" value="<?= $tampil['id'];?>">
           </form>

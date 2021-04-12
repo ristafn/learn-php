@@ -29,7 +29,16 @@ class Pegawai {
         $gather->execute($data);
     }
 
-    // hapus
+    // detail data pegawai (detailPegawai.php)
+    public function detailPegawai($data) {
+        $sql = "SELECT pegawai.*, divisi.nama as divisi FROM pegawai INNER JOIN divisi on divisi.id = pegawai.iddivisi WHERE pegawai.id = ?";
+        $gather = $this->koneksi->prepare($sql);
+        $gather->execute([$data]);
+        $result = $gather->fetch();
+        return $result;
+    }
+
+    // hapus pegawai (dataPegawai.php)
     public function hapus($id) {
         $sql = "DELETE FROM pegawai WHERE id=?";
         $gather = $this->koneksi->prepare($sql);
