@@ -28,4 +28,11 @@ class Pegawai {
         $gather = $this->koneksi->prepare($sql);
         $gather->execute($data);
     }
+
+    // hapus
+    public function hapus($id) {
+        $sql = "DELETE FROM pegawai WHERE id=?";
+        $gather = $this->koneksi->prepare($sql);
+        $gather->execute($id);
+    }
 }

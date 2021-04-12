@@ -18,6 +18,10 @@ switch($tombol) {
     case 'simpan':
         $pegawai->simpan($listData);
         break;
+    case 'hapus':
+        $id[] = $_POST['idx'];
+        $pegawai->hapus($id);
+        break;
     default:
         header('Location: http://localhost/learn-php/uts/index.php?page=dataPegawai');
         break;

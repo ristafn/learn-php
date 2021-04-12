@@ -20,6 +20,7 @@ $tampil = $model->tampilData();
       <th scope="col">Agama</th>
       <th scope="col">Divisi</th>
       <th scope="col">Foto</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -35,6 +36,12 @@ $tampil = $model->tampilData();
         <td><?= $tampil['agama']; ?></td>
         <td><?= $tampil['divisi']; ?></td>
         <td><?= $tampil['foto']; ?></td>
+        <td>
+          <form method="POST" action="controllers/pegawaiController.php">
+            <button class="btn btn-danger" name="proses" value="hapus"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <input type="hidden" name="idx" id="idx" value="<?= $tampil['id'];?>">
+          </form>
+        </td>
       <tr>
       <?php $no++;
     } ?>
