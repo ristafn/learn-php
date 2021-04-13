@@ -7,7 +7,7 @@
                 if (!empty($page)) {
                     include_once $page . '.php';
                 } else {
-                    include_once 'views/menu_page/home.php';
+                    include_once 'views/menu/home.php';
                 }
                 ?>
             </div>
