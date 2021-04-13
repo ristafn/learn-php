@@ -1,5 +1,5 @@
 <?php
-require_once '../koneksi.php';
+require_once '../server/koneksi.php';
 require_once '../models/Pegawai.php';
 
 
@@ -27,8 +27,8 @@ switch($tombol) {
         $pegawai->hapus($id);
         break;
     default:
-        header('Location: http://localhost/learn-php/uts/index.php?page=dataPegawai');
+        header('Location: http://localhost/learn-php/uts/index.php?page=views/menu/dataPegawai');
         break;
 }
-header('Location: http://localhost/learn-php/uts/index.php?page=dataPegawai');
+header('Location: http://localhost/learn-php/uts/index.php?page=views/menu/dataPegawai');
 

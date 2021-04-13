@@ -9,17 +9,17 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.php?page=views/menu_page/home">Home</a>
+                                <a class="nav-link active" aria-current="page" href="index.php?page=views/menu/home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.php?page=views/menu_page/aboutUs">About Us</a>
+                                <a class="nav-link" href="index.php?page=views/menu/aboutUs">About Us</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Pegawai
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="index.php?page=dataPegawai">Data Pegawai</a></li>
+                                    <li><a class="dropdown-item" href="index.php?page=views/menu/dataPegawai">Data Pegawai</a></li>
                                     <li><a class="dropdown-item" href="#">Another action</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
@@ -28,7 +28,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Login</a>
+                                <a class="nav-link" href="index.php?page=views/menu/login">Login</a>
                             </li>
                         </ul>
                     </div>

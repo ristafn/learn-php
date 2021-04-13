@@ -1,5 +1,5 @@
 <?php
-require_once 'koneksi.php';
+require_once 'server/koneksi.php';
 
 include_once 'views/header.php';
 include_once 'views/menu.php';
