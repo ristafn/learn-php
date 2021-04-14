@@ -10,9 +10,9 @@ $tampil = $model->tampilData();
 <a href="index.php?page=views/menu/dataPegawai/formPegawai" class="btn btn-warning">Tambah</a>
 <br>
 <br>
-<table class="table">
+<table class="table table-bordered text-center">
   <thead>
-    <tr>
+    <tr class="bg-warning">
       <th scope="col">No</th>
       <th scope="col">NIP</th>
       <th scope="col">Nama</th>
@@ -38,8 +38,8 @@ $tampil = $model->tampilData();
         <td><?= $tampil['foto']; ?></td>
         <td>
           <form method="POST" action="controllers/pegawaiController.php">
-            <a href="index.php?page=views/menu/dataPegawai/detailPegawai&id=<?= $tampil['id']; ?>" class="btn btn-success"><i class="fa fa-info" aria-hidden="true"></i></a>
-            <a href="index.php?page=views/menu/dataPegawai/formEditPegawai&id=<?= $tampil['id']; ?>" class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true"></i></a>
+            <a href="index.php?page=views/menu/dataPegawai/detailPegawai&id=<?= $tampil['id']; ?>" class="btn btn-primary"><i class="fa fa-info" aria-hidden="true"></i></a>
+            <a href="index.php?page=views/menu/dataPegawai/formEditPegawai&id=<?= $tampil['id']; ?>" class="btn btn-success"><i class="fa fa-edit" aria-hidden="true"></i></a>
             <button class="btn btn-danger" name="proses" value="hapus"><i class="fa fa-trash" aria-hidden="true"></i></button>
             <input type="hidden" name="idx" id="idx" value="<?= $tampil['id']; ?>">
           </form>

@@ -7,11 +7,8 @@
                 </form>
                 <br>
                 <ul class="list-group">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                    <li class="list-group-item">A fourth item</li>
-                    <li class="list-group-item">And a fifth one</li>
+                    <li class="list-group-item"><a href="index.php?page=views/menu/dataPegawai" class="text-dark text-decoration-none">Data Pegawai</a></li>
+                    <li class="list-group-item"><a href="index.php?page=views/menu/aboutUs" class="text-dark text-decoration-none">About Us</a></li>
                 </ul>
             </div>
         </div>

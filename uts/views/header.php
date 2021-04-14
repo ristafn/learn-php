@@ -11,8 +11,11 @@
 
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- timeline -->
+    <link rel="stylesheet" href="css/timeline.css">
     
-    <title>Hello, world!</title>
+    <title>Digital Marketing Agency</title>
 </head>
 
 <body>
