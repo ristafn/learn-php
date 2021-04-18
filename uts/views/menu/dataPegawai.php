@@ -6,8 +6,11 @@ $tampil = $model->tampilData();
 
 
 <h2>Data Pegawai</h2>
-<br>
-<a href="index.php?page=views/menu/dataPegawai/formPegawai" class="btn btn-warning">Tambah</a>
+<?php
+if(isset($member)) {
+?>
+  <a href="index.php?page=views/menu/dataPegawai/formPegawai" class="btn btn-warning">Tambah</a>
+<?php } ?>
 <br>
 <br>
 <table class="table table-bordered text-center">
@@ -39,9 +42,21 @@ $tampil = $model->tampilData();
         <td>
           <form method="POST" action="controllers/pegawaiController.php">
             <a href="index.php?page=views/menu/dataPegawai/detailPegawai&id=<?= $tampil['id']; ?>" class="btn btn-primary"><i class="fa fa-info" aria-hidden="true"></i></a>
-            <a href="index.php?page=views/menu/dataPegawai/formEditPegawai&id=<?= $tampil['id']; ?>" class="btn btn-success"><i class="fa fa-edit" aria-hidden="true"></i></a>
-            <button class="btn btn-danger" name="proses" value="hapus"><i class="fa fa-trash" aria-hidden="true"></i></button>
-            <input type="hidden" name="idx" id="idx" value="<?= $tampil['id']; ?>">
+            <?php
+            $role = isset($member['role']) ? $member['role'] : null;
+            if(isset($member)) {
+            ?>
+                <a href="index.php?page=views/menu/dataPegawai/formEditPegawai&id=<?= $tampil['id']; ?>" class="btn btn-success"><i class="fa fa-edit" aria-hidden="true"></i></a>
+            <?php 
+                if($role != 'staff') {
+            ?>
+                <button class="btn btn-danger" name="proses" value="hapus" onclick="return confirm('Data yang dipilih akan dihapus?')"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                <input type="hidden" name="idx" id="idx" value="<?= $tampil['id']; ?>"> 
+            <?php
+                }
+            } 
+            ?>
+            
           </form>
         </td>
       <tr>

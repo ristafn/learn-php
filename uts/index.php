@@ -1,4 +1,8 @@
 <?php
+session_start();
+global $member;
+global $role;
+
 require_once 'server/koneksi.php';
 
 include_once 'views/header.php';
